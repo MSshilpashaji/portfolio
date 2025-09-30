@@ -3,40 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-   <link rel="stylesheet" href="./style.css">
-  <title>portfolio</title>
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Portfolio - Shilpa Shaji</title>
 </head>
 <body>
+  <!-- ===== Header/Navbar ===== -->
   <header>
-    <a href="#" class="logo">M S Shilpa shaji</a>
-
+    <a href="#" class="logo"><h1>MS</h1></a>
     <nav>
-      <a href="#" class="active">Home</a>
-      <a href="#">Services</a>
-      <a href="#">Skills</a>
-      <a href="#">Experience</a>
-      <a href="#">Education</a>
-      <a href="#">Contact</a>
+      <a href="#home" class="active">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#Projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
-  <section class="home">
-    <div class="img">
-      <img style=width:250px; src="shilpaportfolio.jpg" alt="not found">
+
+  <!-- ===== Home Section ===== -->
+  <section id="home" class="home reveal">
+    <div class="home-container">
+      <div class="profile-pic">
+        <img src="shilpaportfolio.jpg" alt="Profile Picture">
+      </div>
       <div class="home_content">
-        <h1>Hi its <span>M S Shilpa shaji</span></h1>
-        <h3 class="typing_text">I'm a</h3>
-        <p>Full Stack Developer</p>
-        <div class="Social_icons">
-          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="#"><i class="fa-brands fa-github"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <div class="intro-card">
+         
+          <h1 class="typing_text">M S Shilpa shaji</h1>
+          <h3>Full Stack Developer</h3>
+          <p>I love building modern web apps with creativity and efficiency.</p>
+         <div class="social_icons">
+         <a href="https://www.linkedin.com/in/m-s-shilpa-shaji" target="_blank">
+         <i class="fa-brands fa-linkedin"></i>
+         </a>
+
+         <a href="https://github.com/MSshilpashaji" target="_blank">
+         <i class="fa-brands fa-github"></i>
+         </a>
+
+         <a href="https://www.instagram.com/_shilpashaji" target="_blank">
+         <i class="fa-brands fa-instagram"></i>
+         </a>
         </div>
-        <a href="#"class="btn">Hire Me</a>
+
+          <a href="#contact" class="btn">Hire Me</a>
+          <a href="shilpa_resume.pdf" class="btn">Resume</a>
+        </div>
       </div>
     </div>
   </section>
-  
+
+  <!-- ===== Skills Section ===== -->
+  <section id="skills" class="reveal">
+    <h2>Skills</h2>
+    <div class="cards">
+      <div class="card reveal"><h3>Frontend</h3><p>HTML, CSS, Bootstrap</p></div>
+      <div class="card reveal"><h3>Backend</h3><p>Python, Java, C, Django, Flask</p></div>
+      <div class="card reveal"><h3>Database</h3><p>MySQL</p></div>
+      <div class="card reveal"><h3>Tools</h3><p>Git, VS Code, Latex, Anaconda ,Postman</p></div>
+    </div>
+  </section>
+
+  <section id="Projects" class="reveal">
+    <h2>Projects</h2>
+    <div class="cards">
+      <div class="card reveal"><h3>Phishing Url Detector</h3><p>The project aims at designing and implementing a website against cyberattack method where attackers
+deceive individuals into revealing sensitive information by masquerading as trustworthy entities. One
+common technique involves using deceptive URLs that appear legitimate. Detecting phishing URLs is
+crucial for cybersecurity.</p></div>
+<div class="card reveal"><h3>Code Quest</h3><p>Developed a learning platform designed to teach Python programming in an engaging and learner-
+centered manner. The application features a structured learning path powered by Firebase Authenti-
+cation for secure user access and progression tracking.</p>
+
+</div>
+    </div>
+  </section>
+
+  <!-- ===== Education Section ===== -->
+  <section id="education" class="reveal">
+    <h2>Education</h2>
+    <div class="cards">
+      <div class="card reveal"><h3>Bachelor of Computer Science & Engineering</h3><p>Kerala Technological University</p>2021 - 2025</p></div>
+
+    </div>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section id="contact" class="reveal">
+    <h2>Contact</h2>
+    <div class="cards">
+      <div class="card reveal"><h3>Email</h3><p>msshilpa.shaji@gmail.com</p></div>
+      <div class="card reveal"><h3>Phone</h3><p>+91 7559811601</p></div>
+      
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>© 2025 M S Shilpa Shaji. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ===== Scroll Animation Script ===== -->
+  <script>
+    const reveals = document.querySelectorAll(".reveal");
+
+    const appearOptions = {
+      threshold: 0.2
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("active");
+        appearOnScroll.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    reveals.forEach(r => {
+      appearOnScroll.observe(r);
+    });
+  </script>
 </body>
 </html>
